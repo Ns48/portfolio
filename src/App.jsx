@@ -1,11 +1,23 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import Intro from "./intro/Intro";
+import Home from "./home/Home";
+import Menu from "./menu/Menu";
 
 function App() {
   return (
     <>
-      <Intro />
+      <Container fluid>
+        <Row>
+          <Col md={2}>
+            <Menu />
+          </Col>
+          <Col md={10}>
+            <Home />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

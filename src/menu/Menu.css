@@ -1,0 +1,123 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: rgb(250, 234, 244);
+  color: #ffd3b6;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-content {
+  background-color: rgb(250, 234, 244);
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  color: "#FFD3B6";
+}
+
+.menu-content h2 {
+  font-family: monospace;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.menu-content h2 i {
+  margin-right: 10px;
+}
+
+.menu-icon {
+  display: none;
+  position: fixed;
+  top: 10px;
+
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 24px;
+  color: #efbfd0;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 14px;
+  padding: 18px 27px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: hsl(0, 4.3%, 50%);
+  background: #f7f7f7;
+  border: 3px solid #e2daae;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  width: 180px;
+}
+
+.btn.btn-border-4::after,
+.btn.btn-border-4::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+}
+
+.btn.btn-border-4::after {
+  top: -9px;
+  left: -9px;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+
+.btn.btn-border-4::before {
+  bottom: -9px;
+  right: -9px;
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.btn.btn-border-4:hover {
+  color: #b18b43;
+}
+
+.btn.btn-border-4:hover::after,
+.btn.btn-border-4:hover::before {
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  border-color: #d0b0c2;
+}
+
+@media (max-width: 1080px) {
+  .btn {
+    padding: 18px 2px; /* Adjust padding for smaller screens */
+    width: 100px; /* Adjust width for smaller screens */
+  }
+
+  .btn.btn-border-4::after,
+  .btn.btn-border-4::before {
+    border-width: 2px; /* Adjust border width if needed */
+  }
+
+  .menu {
+    padding: 10px;
+  }
+  .menu-content {
+    padding: 0px;
+  }
+}
