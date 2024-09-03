@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import Typed from "typed.js";
+import homeImage from "../assets/bannercodeimg.png";
+import NavBar from "../navbar/NavBar";
 import "./Home.css";
 
-function Home() {
+const Home = () => {
   //Creates a new instance of Typed with the selector .multi-text and the specified options. Typed.js will apply the typing effect to any elements with the class .multi-text.
   useEffect(() => {
     const options = {
@@ -24,7 +26,9 @@ function Home() {
   return (
     <>
       <div>
-        <Row className="home-container">
+        <NavBar />
+
+        <Row className="home-container" md={10}>
           <Col className="home-content" md={4} xl={6}>
             <h1>Namita Shah</h1>
             <h2>
@@ -34,16 +38,37 @@ function Home() {
               My expertise lies both in front-end and back-end development,
               making sure the end product meets the client satisfaction.
             </p>
+
+            <div className="container">
+              <p style={{ fontFamily: "cursive" }}>Contact</p>
+              <button className="btn-style flip">
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+              </button>
+              <button className="btn-style flip">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </button>
+              <button className="btn-style flip">
+                <i class="fa-brands fa-whatsapp fa-xl"></i>
+              </button>
+              <button className="btn-style flip">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+              </button>
+            </div>
           </Col>
 
           <Col xs={12} md={8} xl={6}>
-            <Image src="/bannercodeimg.png" fluid />
+            <Image
+              className="image-animation"
+              src={homeImage}
+              fluid
+              style={{ animationDelay: "2.5s" }}
+            />
           </Col>
         </Row>
       </div>
     </>
   );
-}
+};
 
 export default Home;
 

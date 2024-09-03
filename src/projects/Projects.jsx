@@ -1,38 +1,64 @@
-import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
+import noteimage from "../assets/notes.png";
+import projectImage from "../assets/tripmine.png";
+import NavBar from "../navbar/NavBar";
+import "./Projects.css";
 
 function Projects() {
   return (
-    <Card style={{ width: "20rem" }}>
-      <Card.Img src="/tripmine.png" style={{ height: "14rem" }} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      </Card.Body>
+    <>
+      <NavBar />
 
-      <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+      <h1>Projects </h1>
 
-    //  <Card style={{ width: "20rem" }}>
-    //     <Card.Img src="/tripmine.png" style={{ height: "14rem" }} />
-    //     <Card.Body>
-    //       <Card.Title>Card Title</Card.Title>
-    //       <Card.Text>
-    //         Some quick example text to build on the card title and make up the
-    //         bulk of the card's content.
-    //       </Card.Text>
-    //     </Card.Body>
-
-    //     <Card.Body>
-    //       <Card.Link href="#">Card Link</Card.Link>
-    //       <Card.Link href="#">Another Link</Card.Link>
-    //     </Card.Body>
-    //   </Card>
+      <div class="container-projects">
+        <div class="card" href="#demo">
+          <picture class="card_picture">
+            <img
+              class="card_image"
+              src={projectImage}
+              alt="Tripmine"
+              title="Tripmine"
+            />
+          </picture>
+          <Link to="/projectDetails">
+            <span class="card_more"></span>
+          </Link>
+          <div class="card_content">
+            <p class="card_app">
+              <i class="fa-brands fa-google-play"></i>Mobile App
+            </p>
+            <h3 class="card_title">Travel App</h3>
+            <p class="card_description">
+              Tripmine is a Travel Management App, the purpose of this app is to
+              provide a seamless experience for all the users in terms of
+              planning, budgeting, managing, and traveling.
+            </p>
+          </div>
+        </div>
+        <div class="card" href="#demo">
+          <picture class="card_picture">
+            <img
+              class="card_image"
+              src={noteimage}
+              alt="Tripmine"
+              title="Tripmine"
+            />
+          </picture>
+          <Link to="/projectDetails">
+            <span class="card_more"></span>
+          </Link>
+          <div class="card_content">
+            <p class="card_app">Mobile App</p>
+            <h3 class="card_title">Stick Note App</h3>
+            <p class="card_description">
+              Sticky Note is a Light Note-making Application made with
+              React-native Technology, where users can create the wbdddw
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -1,0 +1,74 @@
+.about-container {
+  background-color: #fdfdfd;
+  height: 270px;
+  width: 70vw;
+  border-radius: 4%;
+  display: flex;
+
+  margin-left: 22rem;
+  margin-top: 2rem;
+}
+
+.about-content-image {
+  width: 200px;
+  height: 200px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  margin-left: 1rem;
+}
+
+.about-content h1 {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  color: brown;
+  /* font-size: 2rem; */
+}
+
+.about-content h4 {
+  margin-left: 3rem;
+}
+
+.about-content p {
+  margin-left: 5rem;
+  color: rgb(151, 145, 149);
+  font-weight: 400;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+@media (max-width: 915px) {
+  .about-container {
+    margin-left: 3rem;
+    width: 70vw;
+  }
+
+  .about-content-image {
+    margin-left: 2rem;
+  }
+  .about-content h1 {
+    margin-top: 6rem;
+    color: brown;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-container {
+    margin-left: 3rem;
+    width: 75vw;
+  }
+
+  .about-content h1 {
+    margin-top: 1rem;
+    color: brown;
+    margin-left: 3rem;
+  }
+
+  .about-content h6,
+  h4 {
+    margin-left: 4rem;
+  }
+}
+
+.ListGroup-Item {
+  background-color: beige;
+}

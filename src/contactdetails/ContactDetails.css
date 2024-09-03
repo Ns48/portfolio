@@ -1,0 +1,86 @@
+.home-contact {
+  padding-left: 20px;
+  height: 100vh;
+
+  background: linear-gradient(
+    90deg,
+    rgb(251, 255, 231) 0%,
+    rgb(245, 233, 249) 41%,
+    rgb(227, 255, 249) 76%
+  );
+}
+
+.home-contact h2 {
+  font-size: 50;
+  margin-top: 80px;
+  font-family: cursive;
+  color: #677d6a;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.social-media a {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #fadca4;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #656153;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1.5s;
+  margin-top: 5rem;
+}
+
+.social-media a:hover {
+  background: #fee715;
+  color: #1f242d;
+  box-shadow: 0 0 20px #fee715;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
